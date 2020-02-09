@@ -1,0 +1,28 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+wemake-python-styleguide = "*"
+black = "*"
+pytest = "==5.3.2"
+mypy = "==0.761"
+pytest-cov = "*"
+ipython = "*"
+ipdb = "*"
+rope = "*"
+snapshottest = "*"
+pytest-freezegun = "*"
+pytest-vcr = "*"
+factory-boy = "*"
+pytest-mock = "*"
+
+[packages]
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
