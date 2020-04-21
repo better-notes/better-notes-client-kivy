@@ -4,15 +4,16 @@ from kivy.uix.carousel import Carousel
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 
-from app import commons, settings
+import app.commons
+import app.settings
 
 
 class NoteApp(App):  # type: ignore
     def build(self) -> Carousel:
         carousel = Carousel(direction="top")
 
-        note_bytes = requests.get(settings.DATA_URL)
-        note_list = commons.msgpack.loads(note_bytes.content)
+        note_bytes = requests.get(app.settings.DATA_URL)
+        note_list = app.commons.msgpack.loads(note_bytes.content)
 
         for note in note_list:
 
@@ -30,6 +31,3 @@ class NoteApp(App):  # type: ignore
             carousel.add_widget(grid)
 
         return carousel
-
-
-NoteApp().run()
