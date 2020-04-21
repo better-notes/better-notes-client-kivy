@@ -1,0 +1,11 @@
+.mypy_cache
+.buildozer
+.vscode
+*/__pycache__/*
+*.pyc
+*.apk
+*.pyc
+.vscode
+.mypy_cache
+.pytest_cache
+web_api.egg-info
